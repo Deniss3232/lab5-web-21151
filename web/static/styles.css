@@ -1,0 +1,63 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f6f6f6;
+  margin: 0;
+}
+
+.container {
+  max-width: 900px;
+  margin: 32px auto;
+  padding: 0 16px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  margin-top: 16px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+th, td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+}
+
+button, .btn {
+  padding: 8px 12px;
+  border: 0;
+  background: black;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.card {
+  background: white;
+  padding: 16px;
+  border-radius: 8px;
+  display: grid;
+  gap: 8px;
+  max-width: 420px;
+}
+
+.badge {
+  display: inline-block;
+  margin-left: 8px;
+  font-size: 12px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: #e8ffe8;
+}
+
+.done td {
+  opacity: 0.75;
+}

@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Series Tracker</title>
+  <link rel="icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+
+  <main class="container">
+    <header class="header">
+      <h1>Series Tracker</h1>
+      <a class="btn" href="/create">+ Agregar</a>
+    </header>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Serie</th>
+          <th>Progreso</th>
+          <th>Acción</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        {{range .}}
+        <tr class="{{if eq .CurrentEpisode .TotalEpisodes}}done{{end}}">
+          <td>
+            <strong>{{.Name}}</strong>
+            {{if eq .CurrentEpisode .TotalEpisodes}}
+              <span class="badge">Completada </span>
+            {{end}}
+          </td>
+
+          <td>{{.CurrentEpisode}} / {{.TotalEpisodes}}</td>
+
+          <td>
+            <button onclick="nextEpisode({{.ID}})">+1</button>
+          </td>
+        </tr>
+        {{end}}
+      </tbody>
+    </table>
+
+  </main>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
